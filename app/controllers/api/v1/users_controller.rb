@@ -1,19 +1,23 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
-  # GET /users
   def index
     @users = User.all
 
     render json: @users
   end
-  #
-  # # GET /users/1
-  # def show
-  #   render json: @user
-  # end
+
+  # GET /users/1
+  # GET /users/1.json
+  def show
+  #  render json: @user
+    #json_string = MovieSerializer.new(movie).serialized_json
+    user_json = UserSerializer.new(@user).serialized_json
+    render json: user_json
+  end
 
   # POST /users
+  # POST /users.json
   def create
     @user = User.new(user_params)
 
@@ -25,6 +29,7 @@ class UsersController < ApplicationController
   end
 
   # PATCH/PUT /users/1
+  # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
       render json: @user
@@ -34,6 +39,7 @@ class UsersController < ApplicationController
   end
 
   # DELETE /users/1
+  # DELETE /users/1.json
   def destroy
     @user.destroy
   end
@@ -44,7 +50,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+    # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :username, :password_digest)
     end
