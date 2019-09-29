@@ -1,6 +1,6 @@
 import { resetLoginForm } from "./loginForm.js"
 import { resetSignupForm } from "./signupForm.js"
-import { getMyStories, clearStories } from "./myStories.js"
+//import { getMyStories, clearStories } from "./myStories.js"
 
 // synchronous action creators returns javascript objects
 export const setCurrentUser = user => {
@@ -33,7 +33,7 @@ export const login = (credentials, history) => {
           alert(response.error)
         } else {
           dispatch(setCurrentUser(response.data))
-          dispatch(getMyStories())
+//          dispatch(getMyStories())
           dispatch(resetLoginForm())
           history.push('/')
         }
@@ -61,7 +61,7 @@ export const signup = (credentials, history) => {
           alert(response.error)
         } else {
           dispatch(setCurrentUser(response.data))
-          dispatch(getMyStories())
+  //        dispatch(getMyStories())
           dispatch(resetSignupForm())
           history.push('/')
         }
@@ -74,7 +74,7 @@ export const signup = (credentials, history) => {
 export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser())
-    dispatch(clearStories())
+  //  dispatch(clearStories())
     return fetch('http://localhost:3000/api/v1/logout', {
       credentials: "include",
       method: "DELETE"
@@ -97,7 +97,7 @@ export const getCurrentUser = () => {
           alert(response.error)
         } else {
           dispatch(setCurrentUser(response.data))
-          dispatch(getMyStories())
+      //    dispatch(getMyStories())
         }
       })
       .catch(console.log)
