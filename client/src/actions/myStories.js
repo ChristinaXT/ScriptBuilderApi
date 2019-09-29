@@ -60,11 +60,10 @@ export const getMyStories = () => {
 export const createStory = (storyData, history) => {
   return dispatch => {
     const sendableStoryData = {
-      // start_date: storyData.startDate,
-      // end_date: storyData.endDate,
       name: storyData.name,
       user_id: storyData.userId
     }
+
     return fetch("http://localhost:3001/api/v1/stories", {
       credentials: "include",
       method: "POST",
@@ -92,8 +91,6 @@ export const createStory = (storyData, history) => {
 export const updateStory = (storyData, history) => {
   return dispatch => {
     const sendableStoryData = {
-      // start_date: storyData.startDate,
-      // end_date: storyData.endDate,
       name: storyData.name
     }
     return fetch(`http://localhost:3001/api/v1/stories/${storyData.storyId}`, {
@@ -133,7 +130,7 @@ export const deleteStory = (storyId, history) => {
         if (resp.error) {
           alert(resp.error)
         } else {
-          dispatch(deletestorySuccess(storyId))
+          dispatch(deleteStorySuccess(storyId))
           history.push(`/stories`)
 
         }
