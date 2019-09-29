@@ -15,3 +15,5 @@ fresno = Location.create(city: "Fresno", state: "California", country: "USA")
 present_day = Epoch.create(timeperiod: "present")
 modern_love = Title.create(name: "Modern Love")
 bill = Character.create(name: "Bill")
+christina = User.first
+christina.stories.create(synopsis: "Bill and Dawn meet when she hits him with her car and fall in love, but after realizing Bill is a serial killer, Dawn fights for her life and wins cuz she is a badass")
