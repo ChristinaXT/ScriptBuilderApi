@@ -3,10 +3,11 @@ import './App.css';
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 import NavBar from './components/NavBar.js'
+import Home from './components/Home.js'
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
 import MyStories from './components/MyStories.js'
-import StoryCard from './components/StoryCard.js'
+import StoryBrief from './components/StoryBrief.js'
 import NewStoryFormWrapper from './components/NewStoryFormWrapper.js'
 import EditStoryFormWrapper from './components/EditStoryFormWrapper.js'
 import { Route, Switch, withRouter } from 'react-router-dom'
@@ -19,7 +20,7 @@ class App extends React.Component {
 
   render (){
     const { loggedIn, stories } = this.props
-   return (
+    return (
      <div className="App">
          { loggedIn ? <NavBar location={this.props.location}/> : <Home/> }
          <Switch>
@@ -31,13 +32,13 @@ class App extends React.Component {
 
                const story = stories.find(story => story.id === props.match.params.id)
                console.log(story)
-               return <StoryCard story={story} {...props}/>
+               return <StoryBrief story={story} {...props}/>
              }
            }/>
          <Route exact path='/stories/:id/edit' render={props => {
 
                const story = stories.find(story => story.id === props.match.params.id)
-               // dispatch updateForm -> story
+              //  dispatch updateForm -> story
                return <EditStoryFormWrapper story={story} {...props}/>
              }
            }/>
