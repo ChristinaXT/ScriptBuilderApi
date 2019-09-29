@@ -13,9 +13,17 @@ class App extends React.Component {
     }
 
   render (){
+    const { loggedIn, stories } = this.props
    return (
-    "hello, I'm React"
+    <Login/>
   );
  }
-}
-export default App;
+
+ const mapStateToProps = state => {
+   return ({
+     loggedIn: !!state.currentUser,
+    // stories: state.myStories
+   })
+ }
+
+ export default withRouter(connect(mapStateToProps, { getCurrentUser })(App));
