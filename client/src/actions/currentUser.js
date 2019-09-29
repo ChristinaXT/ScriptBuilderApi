@@ -101,3 +101,5 @@ export const getCurrentUser = () => {
         }
       })
       .catch(console.log)
+    }
+}
