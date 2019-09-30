@@ -2,6 +2,7 @@ import React from 'react';
 //  Grab the action creator
 import { updateStoryForm } from '../actions/storyForm'
 import { connect } from 'react-redux'
+import {storyForm} from '../actions/storyForm'
 
 
 // This means Redux gives us back a prop called updateStoryForm
@@ -11,7 +12,7 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
   const { name } = formData
 
   const handleChange = event => {
-    console.log("trigger Handle change")
+  //  console.log("trigger Handle change")
     const { name, value } = event.target
     // This is not an invocation of just the action creator,
     // it's now Redux dispatching the action built by the action
@@ -26,15 +27,15 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
     }}>
       <input
         placeholder="Title"
-        name="Title"
+        title="Title"
         onChange={handleChange}
         value={name}
       /><br/>
       <input
         placeholder="Synopsis"
-        name="Synopsis"
+        synopsis="Synopsis"
         onChange={handleChange}
-        value={name}
+        value={synopsis}
       /><br/>
       <input
         type="submit"

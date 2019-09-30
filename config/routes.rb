@@ -10,14 +10,13 @@ namespace :api do
     resources :given_circumstances
     resources :titles
     resources :inciting_incidents
-    resources :stories
     resources :epoches
-    resources :characters
     resources :settings
     resources :users
     resources :comments
-
-    end
+    resources :characters 
+    resources :stories
+   end
   end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
