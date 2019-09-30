@@ -25,7 +25,7 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
       handleSubmit(formData)
     }}>
       <input
-        placeholder="name"
+        placeholder="Title"
         name="name"
         onChange={handleChange}
         value={name}
