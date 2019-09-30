@@ -38,7 +38,7 @@ export const updateStorySuccess = story => {
 
 export const getMyStories = () => {
   return dispatch => {
-    return fetch("http://localhost:3000/api/v1/stories", {
+    return fetch("http://localhost:3001/api/v1/stories", {
       credentials: "include",
       method: "GET",
       headers: {
@@ -65,7 +65,7 @@ export const createStory = (storyData, history) => {
       user_id: storyData.userId
     }
 
-    return fetch("http://localhost:3000/api/v1/stories", {
+    return fetch("http://localhost:3001/api/v1/stories", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -95,7 +95,7 @@ export const updateStory = (storyData, history) => {
       name: storyData.name,
       synopsis: storyData.synopsis
     }
-    return fetch(`http://localhost:3000/api/v1/stories/${storyData.storyId}`, {
+    return fetch(`http://localhost:3001/api/v1/stories/${storyData.storyId}`, {
       credentials: "include",
       method: "PATCH",
       headers: {
@@ -120,7 +120,7 @@ export const updateStory = (storyData, history) => {
 
 export const deleteStory = (storyId, history) => {
   return dispatch => {
-    return fetch(`http://localhost:3000/api/v1/stories/${storyId}`, {
+    return fetch(`http://localhost:3001/api/v1/stories/${storyId}`, {
       credentials: "include",
       method: "DELETE",
       headers: {
