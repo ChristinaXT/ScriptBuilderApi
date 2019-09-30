@@ -1,12 +1,12 @@
 class Api::V1::TitlesController < ApplicationController
   before_action :set_title, only: [:show, :update, :destroy]
 
-  # GET /titles
-  def index
-    @titles = Title.all
-
-    render json: @titles
-  end
+  # # GET /titles
+  # def index
+  #   @titles = Title.all
+  #
+  #   render json: @titles
+  # end
 
   # GET /titles/1
   def show
@@ -18,7 +18,7 @@ class Api::V1::TitlesController < ApplicationController
     @title = Title.new(title_params)
 
     if @title.save
-      render json: @title, status: :created, location: @title
+      render json: @title, status: :created
     else
       render json: @title.errors, status: :unprocessable_entity
     end
