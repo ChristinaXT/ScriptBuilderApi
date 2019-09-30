@@ -19,7 +19,7 @@ export const clearCurrentUser = () => {
 // asynchronous action creators returns a function expression and returns a fetch that allows me to dispatch as needed
 export const login = (credentials, history) => {
   return dispatch => {
-    return fetch("http://localhost:3001/api/v1/login", {
+    return fetch("http://localhost:3000/api/v1/login", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -49,7 +49,7 @@ export const signup = (credentials, history) => {
     const userInfo = {
       user: credentials
     }
-    return fetch("http://localhost:3001/api/v1/signup", {
+    return fetch("http://localhost:3000/api/v1/signup", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -77,7 +77,7 @@ export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser())
     dispatch(clearStories())
-    return fetch('http://localhost:3001/api/v1/logout', {
+    return fetch('http://localhost:3000/api/v1/logout', {
       credentials: "include",
       method: "DELETE"
     })
@@ -86,7 +86,7 @@ export const logout = event => {
 
 export const getCurrentUser = () => {
   return dispatch => {
-    return fetch("http://localhost:3001/api/v1/get_current_user", {
+    return fetch("http://localhost:3000/api/v1/get_current_user", {
       credentials: "include",
       method: "GET",
       headers: {
