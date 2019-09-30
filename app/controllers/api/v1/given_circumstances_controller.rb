@@ -2,11 +2,11 @@ class Api::V1::GivenCircumstancesController < ApplicationController
   before_action :set_given_circumstance, only: [:show, :update, :destroy]
 
   # GET /given_circumstances
-  def index
-    @given_circumstances = GivenCircumstance.all
-
-    render json: @given_circumstances
-  end
+  # def index
+  #   @given_circumstances = GivenCircumstance.all
+  #
+  #   render json: @given_circumstances
+  # end
 
   # GET /given_circumstances/1
   def show
@@ -18,7 +18,7 @@ class Api::V1::GivenCircumstancesController < ApplicationController
     @given_circumstance = GivenCircumstance.new(given_circumstance_params)
 
     if @given_circumstance.save
-      render json: @given_circumstance, status: :created, location: @given_circumstance
+      render json: @given_circumstance, status: :created
     else
       render json: @given_circumstance.errors, status: :unprocessable_entity
     end
