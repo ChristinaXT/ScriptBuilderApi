@@ -3,10 +3,10 @@ class Api::V1::EpochesController < ApplicationController
 
     # GET /epoches
     # GET /epoches.json
-    def index
-      @epoches = Epoch.all
-      render json: @epoches
-    end
+    # def index
+    #   @epoches = Epoch.all
+    #   render json: @epoches
+    # end
 
     # GET /epoches/1
     # GET /epoches/1.json
@@ -18,16 +18,14 @@ class Api::V1::EpochesController < ApplicationController
     # POST /epoches.json
     def create
       @epoch = Epoch.new(epoch_params)
-
       if @epoch.save
-        render json: @epoch, status: :created, location: @epoch
+        render json: @epoch, status: :created
       else
         render json: @epoch.errors, status: :unprocessable_entity
       end
     end
 
     # PATCH/PUT /epoches/1
-    # PATCH/PUT /epoches/1.json
     def update
       if @epoch.update(epoch_params)
         render json: @epoch
@@ -37,7 +35,6 @@ class Api::V1::EpochesController < ApplicationController
     end
 
     # DELETE /epoches/1
-    # DELETE /epoches/1.json
     def destroy
       @epoch.destroy
     end
