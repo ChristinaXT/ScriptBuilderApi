@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const MyStories = props => {
-  const storyCards = props.stories.length > 0 ?
+  const storyBriefs = props.stories.length > 0 ?
     props.stories.map(t => (<p key={t.id}><Link to={`/stories/${t.id}`}>{t.attributes.name}</Link></p>)) :
     null
 
-  return storyCards
+  return storyBriefs
 }
 
 // we provide mapStateToProps to Redux in order to tell Redux:

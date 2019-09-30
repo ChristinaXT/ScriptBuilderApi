@@ -29,11 +29,7 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
   )
 }
 
-// this gives me an argument coming to this component that looks like this:
-// {
-//   username: "cpdun",
-//   password: "passwo"
-// }
+
 const mapStateToProps = state => {
   return {
     loginFormData: state.loginForm

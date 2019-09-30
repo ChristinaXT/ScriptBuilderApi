@@ -31,7 +31,7 @@ class EditStoryFormWrapper extends React.Component {
     return  <>
               <StoryForm editMode handleSubmit={this.handleSubmit} />
               <br/>
-              <button style={{color: "red"}} onClick={()=>deleteStory(storyId, history)}>Delete this Story</button>
+              <button style={{color: "blue"}} onClick={()=>deleteStory(storyId, history)}>Delete this Story</button>
             </>
   }
 };
