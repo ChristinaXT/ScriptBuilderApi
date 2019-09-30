@@ -26,15 +26,15 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
     }}>
       <input
         placeholder="Title"
-        name="name"
+        name="Title"
         onChange={handleChange}
         value={name}
       /><br/>
       <input
-        placeholder="synopsis"
-        name="synopsis"
+        placeholder="Synopsis"
+        name="Synopsis"
         onChange={handleChange}
-        value={synopsis}
+        value={name}
       /><br/>
       <input
         type="submit"
