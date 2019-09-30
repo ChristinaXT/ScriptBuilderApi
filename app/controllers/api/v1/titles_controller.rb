@@ -1,13 +1,6 @@
 class Api::V1::TitlesController < ApplicationController
   before_action :set_title, only: [:show, :update, :destroy]
 
-  # # GET /titles
-  # def index
-  #   @titles = Title.all
-  #
-  #   render json: @titles
-  # end
-
   # GET /titles/1
   def show
     render json: @title

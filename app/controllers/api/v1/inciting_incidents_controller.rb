@@ -1,13 +1,6 @@
 class Api::V1::IncitingIncidentsController < ApplicationController
   before_action :set_inciting_incident, only: [:show, :update, :destroy]
 
-  # GET /inciting_incidents
-  # def index
-  #   @inciting_incidents = IncitingIncident.all
-  #
-  #   render json: @inciting_incidents
-  # end
-
   # GET /inciting_incidents/1
   def show
     render json: @inciting_incident

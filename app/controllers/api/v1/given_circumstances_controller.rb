@@ -1,13 +1,6 @@
 class Api::V1::GivenCircumstancesController < ApplicationController
   before_action :set_given_circumstance, only: [:show, :update, :destroy]
 
-  # GET /given_circumstances
-  # def index
-  #   @given_circumstances = GivenCircumstance.all
-  #
-  #   render json: @given_circumstances
-  # end
-
   # GET /given_circumstances/1
   def show
     render json: @given_circumstance

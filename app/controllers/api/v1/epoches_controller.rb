@@ -1,12 +1,6 @@
 class Api::V1::EpochesController < ApplicationController
   before_action :set_epoch, only: [:show, :update, :destroy]
 
-    # GET /epoches
-    # def index
-    #   @epoches = Epoch.all
-    #   render json: @epoches
-    # end
-
     # GET /epoches/1
     def show
       render json: @epoch
