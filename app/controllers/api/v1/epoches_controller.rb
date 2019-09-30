@@ -2,20 +2,17 @@ class Api::V1::EpochesController < ApplicationController
   before_action :set_epoch, only: [:show, :update, :destroy]
 
     # GET /epoches
-    # GET /epoches.json
     # def index
     #   @epoches = Epoch.all
     #   render json: @epoches
     # end
 
     # GET /epoches/1
-    # GET /epoches/1.json
     def show
       render json: @epoch
     end
 
     # POST /epoches
-    # POST /epoches.json
     def create
       @epoch = Epoch.new(epoch_params)
       if @epoch.save
