@@ -12,6 +12,11 @@ const NavBar = ({ currentUser, loggedIn }) => {
     </div>
   )
 }
+//incoming argument is an object, state, coming from redux
+// and I know it has a property called currentUser
+// state = { ...,
+//   currentUser: {...}
+
 
 const mapStateToProps = ({ currentUser }) => {
   return {

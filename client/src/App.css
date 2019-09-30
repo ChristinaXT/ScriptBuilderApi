@@ -7,16 +7,30 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #404040;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffffe6;
+}
+
+#loggedin {
+  font-size: 7px;
 }
 
 .App-link {
-  color: #09d3ac;
+  color: #cc0000;
+}
+
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.active {
+  color: #ff8080;
 }

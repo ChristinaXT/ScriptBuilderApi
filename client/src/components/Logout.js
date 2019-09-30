@@ -18,10 +18,3 @@ const Logout = ({ logout, history }) => {
 }
 
 export default withRouter(connect(null, { logout } )(Logout))
-
-// I still need....
-
-// 1. action (creator)
-//   - 2 action creators?
-
-// 2. another case statement in my currentUser reducer
