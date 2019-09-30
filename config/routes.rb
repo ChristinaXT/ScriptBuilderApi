@@ -13,7 +13,7 @@ namespace :api do
     resources :stories
     resources :epoches
     resources :characters
-    resources :locations
+    resources :settings
     resources :users
     resources :comments
 
