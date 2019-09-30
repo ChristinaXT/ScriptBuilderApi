@@ -8,7 +8,6 @@ class Api::V1::UsersController < ApplicationController
   end
 
   # GET /users/1
-  # GET /users/1.json
   def show
   #  render json: @user
     #json_string = MovieSerializer.new(movie).serialized_json
@@ -17,19 +16,21 @@ class Api::V1::UsersController < ApplicationController
   end
 
   # POST /users
-  # POST /users.json
   def create
     @user = User.new(user_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      session[:user_id] = @user.id
+      render json: UserSerializer.new(@user), status: :created
     else
-      render json: @user.errors, status: :unprocessable_entity
+      resp = {
+        error: @user.errors.full_messages.to_sentence
+      }
+      render json: resp, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
       render json: @user
@@ -39,7 +40,6 @@ class Api::V1::UsersController < ApplicationController
   end
 
   # DELETE /users/1
-  # DELETE /users/1.json
   def destroy
     @user.destroy
   end
