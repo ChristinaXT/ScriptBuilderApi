@@ -10,10 +10,9 @@ const MyStories = props => {
   return storyBriefs
 }
 
-// we provide mapStateToProps to Redux in order to tell Redux:
-// "Excuse me Redux, would you please provide use access to your state
-// so that we may pick and choose the pieces of state we would like availble
-// to this particular component as props."
+// mapStateToProps says these are the pieces of data that I need
+// state of the redux store
+// returning data type of object whose keys are whatever I want to call it and it comes from the actual store
 
 const mapStateToProps = state => {
   return {
