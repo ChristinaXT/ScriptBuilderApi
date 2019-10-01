@@ -38,8 +38,8 @@ class Api::V1::StoriesController < ApplicationController
     if @story.update(story_params)
       render json: StorySerializer.new(@story), status: :ok
     else
-     error_resp = {
-       error: @story.errors.full_messages.to_sentence
+      error_resp = {
+      error: @story.errors.full_messages.to_sentence
     }
       render json: @story.errors, status: :unprocessable_entity
     end
