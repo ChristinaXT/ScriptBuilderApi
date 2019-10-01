@@ -1,7 +1,7 @@
 // sync actions
 
-export const updateStoryForm = (name, value) => {
-  const formData = { name, value }
+export const updateStoryForm = (name, text, value) => {
+  const formData = { name, text, value }
   return {
     type: "UPDATE_NEW_STORY_FORM",
     formData
