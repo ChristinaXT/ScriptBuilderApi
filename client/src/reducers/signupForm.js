@@ -14,3 +14,5 @@ export default (state=initialState, action) => {
       return state
   }
 }
+
+//need state to redux, added to store after building reducer

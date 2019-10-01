@@ -30,7 +30,7 @@ export const login = (credentials, history) => {
 
       .then(r => r.json())
       .then(response => {
-        console.log(response)
+        //console.log(response)
         if (response.error) {
           alert(response.error)
         } else {
@@ -40,7 +40,7 @@ export const login = (credentials, history) => {
           history.push('/')
         }
       })
-      .catch(console.log)
+      // .catch(console.log)
   }
 }
 
@@ -68,7 +68,7 @@ export const signup = (credentials, history) => {
           history.push('/')
         }
       })
-      .catch(console.log)
+      // .catch(console.log)
   }
 }
 
@@ -102,6 +102,6 @@ export const getCurrentUser = () => {
           dispatch(getMyStories())
         }
       })
-      .catch(console.log)
+      // .catch(console.log)
     }
 }
