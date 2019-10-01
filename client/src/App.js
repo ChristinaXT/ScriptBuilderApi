@@ -31,7 +31,7 @@ class App extends React.Component {
            <Route exact path='/stories/:id' render={props => {
 
                const story = stories.find(story => story.id === props.match.params.id)
-               console.log(story)
+               //console.log(story)
                return <StoryBrief story={story} {...props}/>
              }
            }/>

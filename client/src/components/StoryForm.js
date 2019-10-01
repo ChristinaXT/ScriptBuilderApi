@@ -7,13 +7,13 @@ import { connect } from 'react-redux'
 // which when invoked, Redux will now dispatch
 const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, editMode }) => {
 
-  const { name, text } = formData
+  const { name, synopsis } = formData
 
   const handleChange = event => {
-    const { name, text, value } = event.target
+    const { name, synopsis, value } = event.target
     // it's now Redux dispatching the action built by the action
     // creator with the appropriate arguments
-    updateStoryForm(name, text, value)
+    updateStoryForm(name, synopsis, value)
   }
 
   return (
@@ -26,15 +26,17 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
             <input
               placeholder="Title"
               name="name"
+              type="text"
               onChange={handleChange}
               value={name}
             />
             <br></br>
             <input
               placeholder="synopsis"
+              name="synopsis"
               type="text"
               onChange={handleChange}
-              value={text}
+              value={synopsis}
               /><br/>
             <input
               type="submit"
