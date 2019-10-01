@@ -2,7 +2,6 @@ import React from 'react';
 //  Grab the action creator
 import { updateStoryForm } from '../actions/storyForm'
 import { connect } from 'react-redux'
-// import { storyForm } from '../actions/storyForm'
 
 
 // This means Redux gives us back a prop called updateStoryForm
