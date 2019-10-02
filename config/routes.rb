@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
 post "/api/v1/login", to: "api/v1/sessions#create"
 post "/api/v1/signup", to: "api/v1/users#create"
 delete "/api/v1/logout", to: "api/v1/sessions#destroy"
@@ -11,10 +12,11 @@ namespace :api do
     resources :titles
     resources :inciting_incidents
     resources :epoches
+    resources :synopses
     resources :settings
     resources :users
     resources :comments
-    resources :characters 
+    resources :characters
     resources :stories
    end
   end

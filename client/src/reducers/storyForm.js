@@ -1,6 +1,10 @@
 const initialState = {
-  name: "",
+  title: "",
   synopsis: "",
+  epoch: "",
+  inciting_incident: "",
+  setting: "",
+
 }
 
 export default (state=initialState, action) => {

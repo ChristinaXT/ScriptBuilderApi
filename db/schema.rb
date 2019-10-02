@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_30_143824) do
+ActiveRecord::Schema.define(version: 2019_10_02_193850) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -27,16 +27,11 @@ ActiveRecord::Schema.define(version: 2019_09_30_143824) do
   end
 
   create_table "epoches", force: :cascade do |t|
-    t.string "timeperiod"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "description"
   end
 
   create_table "given_circumstances", force: :cascade do |t|
-    t.text "character_background"
-    t.integer "character_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "content"
   end
 
   create_table "inciting_incidents", force: :cascade do |t|
@@ -46,14 +41,17 @@ ActiveRecord::Schema.define(version: 2019_09_30_143824) do
   end
 
   create_table "settings", force: :cascade do |t|
-    t.string "place"
+    t.text "description"
   end
 
   create_table "stories", force: :cascade do |t|
-    t.text "synopsis"
-    t.integer "user_id"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "synopses", force: :cascade do |t|
+    t.text "description"
   end
 
   create_table "titles", force: :cascade do |t|

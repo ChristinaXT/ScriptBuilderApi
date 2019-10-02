@@ -7,13 +7,13 @@ import { connect } from 'react-redux'
 // which when invoked, Redux will now dispatch
 const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, editMode }) => {
 
-  const { name, synopsis } = formData
+  const { synopsis, title, epoch, inciting_incident, setting } = formData
 
   const handleChange = event => {
-    const { name, synopsis, value } = event.target
+    const { name, value } = event.target
     // it's now Redux dispatching the action built by the action
     // creator with the appropriate arguments
-    updateStoryForm(name, synopsis, value)
+    updateStoryForm(name, value)
   }
 
   return (
@@ -26,22 +26,41 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
             <input
               placeholder="Title"
               name="name"
-              type="text"
               onChange={handleChange}
-              value={name}
+              value={title}
             />
             <br></br>
             <input
-              placeholder="synopsis"
-              name="synopsis"
-              type="text"
+              placeholder="Synopsis"
+              name="summary"
               onChange={handleChange}
               value={synopsis}
-              /><br/>
-            <input
-              type="submit"
-              value={editMode ? "Update Story" : "Create Story" }
-             />
+              />
+              <br></br>
+              <input
+                placeholder="Epoch"
+                name="timeperiod"
+                onChange={handleChange}
+                value={epoch}
+                />
+                <br></br>
+                <input
+                  placeholder="Inciting_incident"
+                  name="description"
+                  onChange={handleChange}
+                  value={inciting_incident}
+                  />
+                  <br></br>
+                  <input
+                    placeholder="Setting"
+                    name="place"
+                    onChange={handleChange}
+                    value={setting}
+                    /><br/>
+                  <input
+                  type="submit"
+                  value={editMode ? "Update Story" : "Create Story" }
+               />
           </form>
        )};
 

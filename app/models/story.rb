@@ -6,6 +6,7 @@ class Story < ApplicationRecord
   has_many :epoches
   has_many :inciting_incidents
   has_many :comments
+  has_many :synopses
 
 
   validates :name, :user, presence: true

@@ -60,7 +60,10 @@ export const getMyStories = () => {
 export const createStory = (storyData, history) => {
   return dispatch => {
     const sendableStoryData = {
-      name: storyData.name,
+      title: storyData.title,
+      epoch: storyData.epoch,
+      inciting_incident: storyData.inciting_incident,
+      setting: storyData.setting,
       synopsis: storyData.synopsis,
       user_id: storyData.userId
     }
@@ -92,8 +95,11 @@ export const createStory = (storyData, history) => {
 export const updateStory = (storyData, history) => {
   return dispatch => {
     const sendableStoryData = {
-      name: storyData.name,
-      synopsis: storyData.synopsis
+      title: storyData.title,
+      synopsis: storyData.synopsis,
+      epoch: storyData.epoch,
+      inciting_incident: storyData.inciting_incident,
+      setting: storyData.setting
     }
     return fetch(`http://localhost:3000/api/v1/stories/${storyData.storyId}`, {
       credentials: "include",
