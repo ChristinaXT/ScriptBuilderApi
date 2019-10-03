@@ -8,16 +8,12 @@ get "/api/v1/get_current_user", to: "api/v1/sessions#get_current_user"
 
 namespace :api do
   namespace :v1 do
-    resources :given_circumstances
-    resources :titles
-    resources :inciting_incidents
-    resources :epoches
-    resources :synopses
-    resources :settings
+    resources :stories
     resources :users
     resources :comments
-    resources :characters
-    resources :stories
+    resources :characters do
+      resources :given_circumstances
+    end
    end
   end
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

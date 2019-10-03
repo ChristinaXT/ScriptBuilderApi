@@ -5,7 +5,7 @@ const StoryBrief = ({ story }) => {
   return (
     story ?
       <div>
-        <h3>{story.attributes.name}</h3>
+        <h3>{story.attributes.title}</h3>
         <p>{story.attributes.synopsis}</p>
 
         <Link to={`/stories/${story.id}/edit`}>Edit this Story</Link>
