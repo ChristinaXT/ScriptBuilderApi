@@ -7,14 +7,14 @@
 }
 
 .App-header {
-  background-color: #404040;
+  background-color: #00e600;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #ffffe6;
+  color: #0000e6;
 }
 
 #loggedin {
@@ -22,15 +22,44 @@
 }
 
 .App-link {
-  color: #cc0000;
+  color: #ffccff;
 }
 
-.NavBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+/* The navbar container */
+.App-topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.App-topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Links - change color on hover */
+.App-topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.typewriter-image {
+  background: url(/.assests/images/typewriter.jpg) no-repeat center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
 }
 
 .active {
-  color: #ff8080;
+  color: #9999ff;
+}
+
+.App-footer {
+  background-color: #ff9900;
+  text-align: center;
+  padding: 10px;
 }
