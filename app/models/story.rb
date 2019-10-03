@@ -7,6 +7,8 @@ class Story < ApplicationRecord
   has_many :inciting_incidents
   has_many :comments
   has_many :synopses
+  has_many :given_circumstances, through: :characters
+  accepts_nested_attributes_for :characters 
 
 
   validates :name, :user, presence: true

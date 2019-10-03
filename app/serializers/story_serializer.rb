@@ -1,6 +1,6 @@
 class StorySerializer
   include FastJsonapi::ObjectSerializer
-  attributes :synopses, :titles, :settings, :epoches, :inciting_incidents 
+  attributes :synopses, :titles, :settings, :epoches, :inciting_incidents, :characters
 end
 
 # belongs_to :user
