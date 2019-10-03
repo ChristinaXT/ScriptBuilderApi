@@ -65,7 +65,7 @@ export const createStory = (storyData, history) => {
       inciting_incident: storyData.inciting_incident,
       setting: storyData.setting,
       synopsis: storyData.synopsis,
-      user_id: storyData.userId
+      character: storyData.character
     }
 
     return fetch("http://localhost:3000/api/v1/stories", {
@@ -99,7 +99,9 @@ export const updateStory = (storyData, history) => {
       synopsis: storyData.synopsis,
       epoch: storyData.epoch,
       inciting_incident: storyData.inciting_incident,
-      setting: storyData.setting
+      setting: storyData.setting,
+      character: storyData.character
+
     }
     return fetch(`http://localhost:3000/api/v1/stories/${storyData.storyId}`, {
       credentials: "include",
