@@ -10,21 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_04_182659) do
-
-  create_table "characters", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "given_circumstances", force: :cascade do |t|
-    t.text "content"
-  end
+ActiveRecord::Schema.define(version: 2019_10_04_201641) do
 
   create_table "stories", force: :cascade do |t|
-    t.text "content"
+    t.string "title"
+    t.text "notes"
+    t.string "epoch"
+    t.string "character"
+    t.text "inciting_incident"
+    t.text "setting"
+    t.text "synopsis"
     t.integer "user_id"
+    t.text "character_history"
   end
 
   create_table "users", force: :cascade do |t|

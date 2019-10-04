@@ -4,6 +4,9 @@ const initialState = {
   epoch: "",
   inciting_incident: "",
   setting: "",
+  character: "",
+  character_history: "",
+  notes: "",
 
 }
 

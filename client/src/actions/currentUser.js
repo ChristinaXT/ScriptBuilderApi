@@ -99,7 +99,7 @@ export const getCurrentUser = () => {
           alert(response.error)
         } else {
           dispatch(setCurrentUser(response.data))
-          // dispatch(getMyStories())
+           dispatch(getMyStories())
 
         }
       })

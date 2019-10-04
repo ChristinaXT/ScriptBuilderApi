@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 // which when invoked, Redux will now dispatch
 const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, editMode }) => {
 
-  const { synopsis, title, epoch, inciting_incident, setting } = formData
+  const { synopsis, title, epoch, inciting_incident, setting, character, character_history, notes } = formData
 
   const handleChange = event => {
     const { name, value } = event.target
@@ -25,37 +25,65 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
             <br></br>
             <input
               placeholder="Title"
-              name="name"
+              name="title"
               onChange={handleChange}
               value={title}
             />
             <br></br>
             <input
               placeholder="Synopsis"
-              name="summary"
+              name="synopsis"
+              type="text"
               onChange={handleChange}
               value={synopsis}
               />
               <br></br>
               <input
                 placeholder="Epoch"
-                name="description"
+                name="epoch"
+                type="text"
                 onChange={handleChange}
                 value={epoch}
                 />
                 <br></br>
                 <input
                   placeholder="Inciting_incident"
-                  name="description"
+                  name="inciting_incident"
+                  type="text"
                   onChange={handleChange}
                   value={inciting_incident}
                   />
                   <br></br>
                   <input
                     placeholder="Setting"
-                    name="description"
+                    name="setting"
+                    type="text"
                     onChange={handleChange}
                     value={setting}
+                    />
+                    <br></br>
+                    <input
+                      placeholder="Characters"
+                      name="character"
+                      type="text"
+                      onChange={handleChange}
+                      value={character}
+                      />
+                      <br></br>
+                      <input
+                        placeholder="Characters Backgrounds"
+                        name="character_history"
+                        type="text"
+                        onChange={handleChange}
+                        value={character_history}
+                        />
+                        <br></br>
+                        <input
+                          placeholder="Notes"
+                          name="notes"
+                          type="text"
+                          onChange={handleChange}
+                          value={notes}
                     /><br/>
                   <input
                   type="submit"

@@ -20,8 +20,10 @@ export const setFormDataForEdit = story => {
     synopsis: story.attributes.synopsis,
     epoch: story.attributes.epoch,
     inciting_incident: story.attributes.inciting_incident,
-    setting: story.attributes.setting
-
+    setting: story.attributes.setting,
+    character: story.attributes.character,
+    character_history: story.attributes.character_history,
+    notes: story.attributes.notes
   }
   return {
     type: "SET_FORM_DATA_FOR_EDIT",
