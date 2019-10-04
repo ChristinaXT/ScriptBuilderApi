@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_193850) do
+ActiveRecord::Schema.define(version: 2019_10_04_182659) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -18,46 +18,13 @@ ActiveRecord::Schema.define(version: 2019_10_02_193850) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.text "content"
-    t.integer "user_id"
-    t.integer "story_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "epoches", force: :cascade do |t|
-    t.text "description"
-  end
-
   create_table "given_circumstances", force: :cascade do |t|
     t.text "content"
   end
 
-  create_table "inciting_incidents", force: :cascade do |t|
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "settings", force: :cascade do |t|
-    t.text "description"
-  end
-
   create_table "stories", force: :cascade do |t|
     t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "synopses", force: :cascade do |t|
-    t.text "description"
-  end
-
-  create_table "titles", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

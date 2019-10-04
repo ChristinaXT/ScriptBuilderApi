@@ -39,7 +39,7 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
               <br></br>
               <input
                 placeholder="Epoch"
-                name="timeperiod"
+                name="description"
                 onChange={handleChange}
                 value={epoch}
                 />
@@ -53,7 +53,7 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
                   <br></br>
                   <input
                     placeholder="Setting"
-                    name="place"
+                    name="description"
                     onChange={handleChange}
                     value={setting}
                     /><br/>
