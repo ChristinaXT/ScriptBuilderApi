@@ -6,7 +6,7 @@ class Story < ApplicationRecord
   has_many :epoches
   has_many :inciting_incidents
   has_many :comments
-  has_many :synopsis
+  has_many :synopses
   has_many :characters
   has_many :character_histories
 

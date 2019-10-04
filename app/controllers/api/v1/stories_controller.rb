@@ -6,7 +6,7 @@ class Api::V1::StoriesController < ApplicationController
     if logged_in?
      @stories = current_user.stories
 
-     render json: StorySerializer.new(@stories)
+      render json: StorySerializer.new(@stories)
    else
      render json: {
        error: "You must be logged in to see stories"
