@@ -30,6 +30,8 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
               value={title}
             />
             <br></br>
+              <br></br>
+
             <input
               placeholder="Synopsis"
               name="synopsis"
@@ -38,6 +40,8 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
               value={synopsis}
               />
               <br></br>
+                <br></br>
+
               <input
                 placeholder="Epoch"
                 name="epoch"
@@ -46,6 +50,8 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
                 value={epoch}
                 />
                 <br></br>
+                  <br></br>
+
                 <input
                   placeholder="Inciting_incident"
                   name="inciting_incident"
@@ -54,6 +60,8 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
                   value={inciting_incident}
                   />
                   <br></br>
+                    <br></br>
+
                   <input
                     placeholder="Setting"
                     name="setting"
@@ -62,6 +70,8 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
                     value={setting}
                     />
                     <br></br>
+                      <br></br>
+
                     <input
                       placeholder="Characters"
                       name="character"
@@ -70,6 +80,8 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
                       value={character}
                       />
                       <br></br>
+                        <br></br>
+
                       <input
                         placeholder="Character History"
                         name="character_history"
@@ -78,13 +90,17 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
                         value={character_history}
                         />
                         <br></br>
+                          <br></br>
+
                         <input
                           placeholder="Notes"
                           name="notes"
                           type="text"
                           onChange={handleChange}
                           value={notes}
+
                     /><br/>
+                  <br></br>
                   <input
                   type="submit"
                   value={editMode ? "Update Story" : "Create Story" }
