@@ -1,12 +1,12 @@
-.App {
+App {
   text-align: center;
 }
 
-.App-logo {
+App-logo {
   height: 40vmin;
 }
 
-.App-header {
+App-header {
   background-color: #00e600;
   min-height: 100vh;
   display: flex;
@@ -21,18 +21,17 @@
   font-size: 7px;
 }
 
-.App-link {
-  color: #ffccff;
-}
+
+
 
 /* The navbar container */
-.App-topnav {
+topnav {
   overflow: hidden;
   background-color: #333;
 }
 
 /* Navbar links */
-.App-topnav a {
+topnav a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -42,23 +41,18 @@
 }
 
 /* Links - change color on hover */
-.App-topnav a:hover {
+topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.typewriter-image {
-  background: url(/.assests/images/typewriter.jpg) no-repeat center;
-  background-size: cover;
-  height: 500px;
-  position: relative;
-}
 
-.active {
+
+active {
   color: #9999ff;
 }
 
-.App-footer {
+footer {
   background-color: #ff9900;
   text-align: center;
   padding: 10px;

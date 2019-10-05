@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const MyStories = props => {
   const storyBriefs = props.stories.length > 0 ?
-    props.stories.map(t => (<p key={t.id}><Link to={`/stories/${t.id}`}>{t.attributes.name}</Link></p>)) :
+    props.stories.map(t => (<p key={t.id}><Link to={`/stories/${t.id}`}>{t.attributes.title}</Link></p>)) :
     null
 
   return storyBriefs

@@ -71,7 +71,7 @@ const StoryForm = ({ formData, updateStoryForm, userId, story, handleSubmit, edi
                       />
                       <br></br>
                       <input
-                        placeholder="Characters Backgrounds"
+                        placeholder="Character History"
                         name="character_history"
                         type="text"
                         onChange={handleChange}
