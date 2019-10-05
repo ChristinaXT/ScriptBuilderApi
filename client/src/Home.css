@@ -4,43 +4,31 @@
   margin: 50px;
 }
 
+.story {
+  margin: 0 50px;
+}
+
 h2 {
   font-family: 'Mansalva', cursive;
-  background: #375e97;
+  background: rgba(51, 0, 102, .7);
   color: #ffbb00;
-}
-
-p {
-  font-family: 'Grenze', serif;
-  color: #f7efe2;
-}
-
-a {
-  color: yellow;
-}
-
-link {
-  color: #f70025;
-}
-
-
-/* .homePage {
+  text-shadow: 5px 2px navy;
   text-align: center;
+  padding: 5px;
+  border-radius: 20px;
 }
 
-.homePage-logo {
-  text-align: center;
-  margin-top: 15%;
-  padding: 70px;
-}
+.intro {
+  background: rgba(44, 62, 80, .5);
+  margin: 80px 500px 80px 0;
+  padding: 50px;
+  border-radius: 75px 10px;
 
-.homePage-logo h1 {
-  font-size: 5em;
-} */
+}
 
 body {
-  background-image: url("https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
   background-color: #fb6542;
+  background-image: url("https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
   min-height: 100vh;
   min-width: 100%;
@@ -49,12 +37,28 @@ body {
   left: 0;
   z-index: -2;
 }
-footer {
-  background-color: #af1c1c;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  font-size: 0.7em;
-  text-align: center;
-  min-width: 20%;
+
+
+.story-brief {
+  background: rgba(44, 62, 80, .5);
+  margin: 80px 800px 80px 0;
+  padding: 50px;
+  border-radius: 75px 10px;
+}
+
+p {
+  font-family: 'Grenze', serif;
+  color: #f7efe2;
+  text-shadow: 5px 2px navy;
+}
+
+
+
+a {
+  color: #FF3355;
+  font-size: 20px;
+}
+
+link {
+  color: #f70025;
 }

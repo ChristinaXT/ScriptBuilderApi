@@ -1,37 +1,15 @@
-App {
-  text-align: center;
-}
-
-App-logo {
-  height: 40vmin;
-}
-
-App-header {
-  background-color: #00e600;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #0000e6;
-}
-
-#loggedin {
-  font-size: 7px;
-}
-
+@import "https://fonts.googleapis.com/css?family=Grenze|Mansalva&display=swap" rel="stylesheet";
 
 
 
 /* The navbar container */
-topnav {
+.topnav {
   overflow: hidden;
-  background-color: #333;
+  background: rgba(0, 0, 153, .5);
 }
 
 /* Navbar links */
-topnav a {
+.topnav a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -41,19 +19,8 @@ topnav a {
 }
 
 /* Links - change color on hover */
-topnav a:hover {
-  background-color: #ddd;
+.topnav a:hover {
+  background: rgba(255, 153, 51, .5);
   color: black;
-}
-
-
-
-active {
-  color: #9999ff;
-}
-
-footer {
-  background-color: #ff9900;
-  text-align: center;
-  padding: 10px;
+  font-weight: bold;
 }

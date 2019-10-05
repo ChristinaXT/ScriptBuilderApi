@@ -4,16 +4,18 @@ import {Link} from 'react-router-dom'
 const StoryBrief = ({ story }) => {
   return (
     story ?
-      <div>
+      <div className="story">
         <h2>{story.attributes.title}</h2>
-        <p>{story.attributes.epoch}</p>
-        <p>{story.attributes.setting}</p>
-        <p>{story.attributes.inciting_incident}</p>
-        <p>{story.attributes.character}</p>
-        <p>{story.attributes.character_history}</p>
-        <p>{story.attributes.synopsis}</p>
-        <br></br>
-        <p>{story.attributes.notes}</p>
+        <div className="story-brief">
+          <p>EPOCH: {story.attributes.epoch}</p>
+          <p>SETTING: {story.attributes.setting}</p>
+          <p>INCITING INCIDENT: {story.attributes.inciting_incident}</p>
+          <p>CHARACTERS: {story.attributes.character}</p>
+          <p>CHARACTERS HISTORIES: {story.attributes.character_history}</p>
+          <p>SYNOPSIS: {story.attributes.synopsis}</p>
+          <br></br>
+          <p>SPECIAL NOTES: {story.attributes.notes}</p>
+        </div>
 
         <Link to={`/stories/${story.id}/edit`}>Edit this Story</Link>
       </div> :

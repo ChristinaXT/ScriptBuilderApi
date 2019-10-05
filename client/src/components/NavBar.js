@@ -5,7 +5,7 @@ import Logout from './Logout'
 
 const NavBar = ({ currentUser, loggedIn }) => {
   return (
-    <div className="NavBar">
+    <div className="topnav">
       <NavLink exact activeClassName="active" to="/home"  >Home</NavLink>
       <NavLink exact activeClassName="active" to="/stories"  >My Stories</NavLink>
       <NavLink exact activeClassName="active" to="/stories/new" >New Story</NavLink>
