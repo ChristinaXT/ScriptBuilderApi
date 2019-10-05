@@ -65,6 +65,6 @@ class Api::V1::StoriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def story_params
-      params.permit(:title, :epoch, :inciting_incident, :setting, :synopsis, :character, :notes, :character_histories)
+      params.permit(:title, :epoch, :inciting_incident, :setting, :synopsis, :character, :notes, :character_history)
     end
 end
