@@ -11,7 +11,7 @@ import StoryBrief from './components/StoryBrief.js'
 import NewStoryFormWrapper from './components/NewStoryFormWrapper.js'
 import EditStoryFormWrapper from './components/EditStoryFormWrapper.js'
 import { Route, Switch, withRouter } from 'react-router-dom'
-
+//class component 2 requirement
 class App extends React.Component {
 
   componentDidMount() {

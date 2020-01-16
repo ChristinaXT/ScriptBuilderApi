@@ -4,6 +4,7 @@ import { updateStory, deleteStory } from '../actions/myStories'
 import { setFormDataForEdit, resetStoryForm } from '../actions/storyForm'
 import { connect } from 'react-redux'
 
+//class component 1 requirement
 class EditStoryFormWrapper extends React.Component {
   componentDidMount(){
     this.props.story && this.props.setFormDataForEdit(this.props.story)

@@ -37,3 +37,8 @@ const mapStateToProps = state => {
 }
 // mapStateToProps connects the data to the reducer
 export default connect(mapStateToProps, { updateLoginForm, login } )(Login)
+
+//we use connect to connect it to our redux store. Connect takes two parameters:
+//One function mapStateToProps which maps parts of the state into your
+//components props and one function mapDispatchToProps which maps functions into your props which are,
+//when called, dispatched to redux.

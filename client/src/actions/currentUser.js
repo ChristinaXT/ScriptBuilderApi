@@ -17,6 +17,7 @@ export const clearCurrentUser = () => {
 }
 
 // asynchronous action creators returns a function expression and returns a fetch that allows me to dispatch as needed
+//fetch the data from our API. We decode the json coming in into an object.
 export const login = (credentials, history) => {
   return dispatch => {
     return fetch("http://localhost:3000/api/v1/login", {
@@ -27,7 +28,9 @@ export const login = (credentials, history) => {
       },
       body: JSON.stringify(credentials)
     })
-
+    //Then we check for an error. 
+    //If an error happend we throw it and call our error function. If everything went okay, we call the success action.
+    //The reducer handles the rest
       .then(r => r.json())
       .then(response => {
         //console.log(response)
