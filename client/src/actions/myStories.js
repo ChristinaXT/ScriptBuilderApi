@@ -35,7 +35,8 @@ export const updateStorySuccess = story => {
 }
 
 // async actions
-
+// asynchronous action creators returns a function expression and returns a fetch that allows me to dispatch as needed
+//fetch the data from our API. We decode the json coming in into an object.
 export const getMyStories = () => {
   return dispatch => {
     return fetch("http://localhost:3000/api/v1/stories", {
@@ -67,7 +68,7 @@ export const createStory = (storyData, history) => {
       synopsis: storyData.synopsis,
       character: storyData.character,
       character_history: storyData.character_history,
-      notes: storyData.notes, 
+      notes: storyData.notes,
     }
 
     return fetch("http://localhost:3000/api/v1/stories", {
@@ -115,6 +116,9 @@ export const updateStory = (storyData, history) => {
       },
       body: JSON.stringify(sendableStoryData)
     })
+    //Then we check for an error.
+    //If an error happend we throw it and call our error function. If everything went okay, we call the success action.
+    //The reducer handles the rest
       .then(r => r.json())
       .then(resp => {
         if (resp.error) {
