@@ -9,4 +9,6 @@ You can save your story ideas on their own page and refer to them later for writ
 Clone the app,
 
 use localhost 3000 for rails s
+
+
 use localhost 3001 for npm start
