@@ -20,6 +20,13 @@ export const addStory = story => {
   }
 }
 
+// export const addFavorite = storyId => {
+//   return {
+//     type: "ADD_FAVORITE",
+//     storyId
+//   }
+// }
+
 export const deleteStorySuccess = storyId => {
   return {
     type: "DELETE_STORY",
@@ -33,6 +40,8 @@ export const updateStorySuccess = story => {
     story
   }
 }
+
+
 
 // async actions
 // asynchronous action creators returns a function expression and returns a fetch that allows me to dispatch as needed
@@ -58,7 +67,10 @@ export const getMyStories = () => {
   }
 }
 
+
+
 export const createStory = (storyData, history) => {
+  console.log('c')
   return dispatch => {
     const sendableStoryData = {
       title: storyData.title,
@@ -81,6 +93,7 @@ export const createStory = (storyData, history) => {
     })
       .then(r => r.json())
       .then(resp => {
+        console.log('d')
         if (resp.error) {
           alert(resp.error)
         } else {
@@ -93,6 +106,7 @@ export const createStory = (storyData, history) => {
       .catch(console.log)
 
   }
+  // console.log('e')
 }
 
 export const updateStory = (storyData, history) => {

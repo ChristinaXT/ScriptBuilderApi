@@ -52,6 +52,22 @@ p {
   text-shadow: 5px 2px navy;
 }
 
+button {
+  color: white;
+  margin-left: 1.25em;
+  cursor: pointer;
+  text-transform: lowercase;
+  transition: 0.5s ease-in-out;
+}
+
+button:hover {
+  text-transform: uppercase;
+  background: rgba(0, 0, 153, .5);
+}
+
+button:focus {
+  outline: none;
+}
 
 
 a {

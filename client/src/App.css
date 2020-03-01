@@ -16,11 +16,62 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  letter-spacing: .75px;
+  margin-left: 3.5em;
+  transition: 0.3s ease-in-out;
 }
 
-/* Links - change color on hover */
+.topnav a:first-child {
+  margin-left: 0;
+}
+
+/* Menu Links - change color on hover */
 .topnav a:hover {
   background: rgba(255, 153, 51, .5);
   color: black;
-  font-weight: bold;
+}
+
+.menu-inner-container {
+  padding-left: 16px;
+}
+
+.menu-inner-container a {
+  text-decoration: none;
+}
+
+.menu-inner-container button {
+  border-radius: 10px;
+  background: rgba(255, 153, 51, .5);
+}
+
+/* Links - change color on hover */
+p a:hover {
+  color: steelblue;
+}
+
+form {
+  float: none;
+  margin-left: 50px;
+}
+
+form input {
+  font-family: 'Grenze', serif;
+  font-size: 15px;
+  color: #f7efe2;
+  background: transparent;
+  text-shadow: 5px 2px navy;
+  cursor: pointer;
+  /* border: none; */
+}
+
+form input:hover {
+  color: #FF3355;
+}
+
+#logOutButton,
+#loggedin {
+  float: right;
+  margin-right: 1.25em;
+  vertical-align: middle;
+  margin-block-start: 1em;
 }
