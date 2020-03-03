@@ -9,7 +9,7 @@ class MyStories extends React.Component {
     this.state = {
       button: ""
     };
-    this.addFavorite = this.addFavorite.bind(this);
+
   }
 
   addFavorite = (e, id) => {
