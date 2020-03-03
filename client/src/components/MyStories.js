@@ -28,7 +28,7 @@ class MyStories extends React.Component {
             className={this.state.button===t.id ? "buttonTrue" : "buttonFalse"}
             onClick={() => this.addFavorite(t.id)}
           >
-            Favorites
+            Favorite
           </button>
         </p>
       </div>
