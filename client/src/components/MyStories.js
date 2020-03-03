@@ -1,28 +1,46 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import React from "react"
+import { connect } from "react-redux"
+import { Link } from "react-router-dom"
 
-const MyStories = props => {
-  const storyBriefs = props.stories.length > 0 ?
+class MyStories extends React.Component {
+  constructor(props) {
+    super(props);
 
-          props.stories.map(t => (<div className="menu-inner-container"><p key={t.id}><Link to={`/stories/${t.id}`}>{t.attributes.title}</Link>
+    this.state = {
+      button: false
+    };
+    this.addFavorite = this.addFavorite.bind(this);
+  }
 
-          <button onClick={() => props.addFavorite(t.id)}> Favorite</button>
+  addFavorite = id => {
+    this.setState({
+      button: id
+    });
+  };
 
-          </p></div>)):
-          null
-
-
-//refactor - create a button that will allow for us to mark which our favorites are
-  return storyBriefs
- }
-
-
-const mapStateToProps = state => {
-  return {
-    stories: state.myStories
+  render() {
+    return this.props.stories.map(t => (
+      <div className="menu-inner-container">
+        <p key={t.id}>
+          <Link to={`/stories/${t.id}`}>{t.attributes.title}</Link>
+          <button
+            key={t.id}
+            className={this.state.button===t.id ? "buttonTrue" : "buttonFalse"}
+            onClick={() => this.addFavorite(t.id)}
+          >
+            Favorites
+          </button>
+        </p>
+      </div>
+    ));
   }
 }
 
-export default connect(mapStateToProps)(MyStories)
-// props, function declaration, components
+//refactor - create a button that will allow for us to mark which our favorites are
+const mapStateToProps = state => {
+  return {
+    stories: state.myStories
+  };
+};
+
+export default connect(mapStateToProps)(MyStories);

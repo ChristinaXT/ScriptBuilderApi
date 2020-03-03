@@ -33,15 +33,11 @@
 
 .menu-inner-container {
   padding-left: 16px;
+  margin-bottom: 2.35em;
 }
 
 .menu-inner-container a {
   text-decoration: none;
-}
-
-.menu-inner-container button {
-  border-radius: 10px;
-  background: rgba(255, 153, 51, .5);
 }
 
 /* Links - change color on hover */

@@ -20,12 +20,6 @@ export const addStory = story => {
   }
 }
 
-// export const addFavorite = storyId => {
-//   return {
-//     type: "ADD_FAVORITE",
-//     storyId
-//   }
-// }
 
 export const deleteStorySuccess = storyId => {
   return {

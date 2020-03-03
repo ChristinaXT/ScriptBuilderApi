@@ -57,11 +57,11 @@ button {
   margin-left: 1.25em;
   cursor: pointer;
   text-transform: lowercase;
-  transition: 0.5s ease-in-out;
+  transition: 0.5s;
 }
 
 button:hover {
-  text-transform: uppercase;
+  letter-spacing: 2px;
   background: rgba(0, 0, 153, .5);
 }
 
@@ -77,4 +77,28 @@ a {
 
 link {
   color: #f70025;
+}
+
+.buttonTrue,
+.buttonFalse {
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 1.5px #999;
+  transition: 0.65s;
+}
+
+.buttonTrue {
+  background-color: blue;
+}
+
+.buttonFalse {
+  background-color: rgba(255, 153, 51, .5);
 }
