@@ -7,12 +7,12 @@ class MyStories extends React.Component {
     super(props);
 
     this.state = {
-      button: false
+      button: ""
     };
     this.addFavorite = this.addFavorite.bind(this);
   }
 
-  addFavorite = id => {
+  addFavorite = (e, id) => {
     this.setState({
       button: id
     });
@@ -26,7 +26,7 @@ class MyStories extends React.Component {
           <button
             key={t.id}
             className={this.state.button===t.id ? "buttonTrue" : "buttonFalse"}
-            onClick={() => this.addFavorite(t.id)}
+            onClick={(event) => this.addFavorite(event, t.id)}
           >
             Favorite
           </button>
