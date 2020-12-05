@@ -12,3 +12,11 @@ use localhost 3000 for rails s
 
 
 use localhost 3001 for npm start
+
+![img](https://imgur.com/hAJD3PG.png)
+![img](https://imgur.com/A7rSqeB.png)
+![img](https://imgur.com/TtheSjb.png)
+![img](https://imgur.com/wNYdgYk.png)
+![img](https://imgur.com/Pjth7tr.png)
+![img](https://imgur.com/KJb3yJt.png)
+![img](https://imgur.com/uIEX21U.png)
